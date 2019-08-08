@@ -1,0 +1,395 @@
+
+<div class="container">
+                <div class="row pl-2 pr-2">
+                                <h1 style="font-size:56px" class="col-sm-12 card card-body  border-bottom border-3 border-right-0 border-left-0 border-top-0">
+                                                Deploying Angular app from Github on Netlify
+                                </h1> 
+                        </div>
+       
+       
+        <div class="row pl-2 pr-2">
+                        <p style="font-size:28px" class="col-sm-12">
+                                         <strong>08/08/2019</strong>
+                                </p>
+                                <p style="font-size:28px" class="col-sm-12">
+                                                <strong> My Account:   </strong> <a href="https://github.com/krishnakurtakoti"><i class="fa fa-github" style="font-size:52px;color:black"></i></a>   
+                                       </p>
+                <p style="font-size:28px" class="col-sm-12">
+                        This writing is a reference for me on deploying Angular app from Github on Netlify.I have successfully deployed the Angular app on Netlify for <strong>free.</strong>
+                </p> 
+        </div>
+        <div class="row pl-2 pr-2">
+                <h1 style="font-size:56px" class="col-sm-12 card card-body  border-bottom border-3 border-right-0 border-left-0 border-top-0">
+                        Step 1:   
+                </h1> 
+        </div>
+
+        <div class="row pr-2">
+        <div class="col-sm-12">
+                <h2 style="font-size:48px;color:black" class="card card-body  border-bottom border-3 border-right-0 border-left-0 border-top-0">Prerequisites :</h2>        
+        </div>
+        </div>
+
+        <div class="row">
+        <div class="col-sm-6 pl-2 pr-2">
+          <div class="card border-secondary mb-3 text-center">
+                <h1 class="card-header" style="font-size:32px"></h1>
+            <div class="card-body">
+              <h1 class="card-title" style="font-size:32px"></h1>
+              <h2 class="card-text" style="font-size:32px">1. Git installed</h2>
+              <h2 class="card-text" style="font-size:32px">2. Node.js installed</h2>
+              <h2 class="card-text" style="font-size:32px">3. Visual Studio Code</h2>
+            
+            
+            </div>
+          </div>
+        </div>
+        <div class="col-sm-6 pr-4">
+          <div class="card border-secondary mb-3 text-center">
+                <h5 class="card-header" style="font-size:32px"></h5>
+               
+            <div class="card-body">
+              <h1 class="card-title" style="font-size:32px"></h1>
+              <h2 class="card-text" style="font-size:32px">4. Angular installed</h2>
+              <h2 class="card-text" style="font-size:32px">5. Github Account</h2>
+              <h2 class="card-text" style="font-size:32px">6. Netlify Account</h2>
+            </div>
+          </div>
+        </div>
+    </div>
+        <div class="row pr-2">
+                        <div class="col-sm-12">
+                          <p class=""style="font-size:28px">
+                                You can use Github as OAuth  provider,i.e,if you have Github account,you can directly Register and Login into Netlify.
+                                 </p> 
+                         </div>
+        </div>  
+        <div class="row pl-2 pr-2">
+                <h1 style="font-size:56px" class="col-sm-12 text-primary card card-body  border-bottom border-3 border-right-0 border-left-0 border-top-0 pull-left">Starting from scratch  
+                </h1> 
+        </div>
+        <div class="row pl-2 pr-2">
+                <h1 style="font-size:36px" class="col text-danger card card-body  border-bottom border-3 border-right-0 border-left-0 border-top-0">If you do not have Git on Windows?
+                </h1>
+        </div>
+
+        <div class="row pr-2">
+                        <div class="col-sm-12">
+                <p style="font-size:28px">
+                        Following this video "Install Git, Clone a project (Windows)" <a href="https://www.youtube.com/watch?v=Jge57UHvYto&list=WL&index=3">https://www.youtube.com/watch?v=Jge57UHvYto&list=WL&index=3</a> for Git Installation on Windows10 worked for me.
+                </p>
+                </div>
+        </div>
+        <div class="row pl-2 pr-2">
+                <div class="col-sm-12">
+                                <p style="font-size:28px">Only one necessary change to make if git is not recognized in Windows is :</p>
+                                <p style="font-size:28px">Choose <strong>"Use Git and optional Unix tools from the Windows Command Prompt"</strong> as shown below</p>
+                                <img width="full"class="img-fluid pr-4" src="https://res.cloudinary.com/dskzmamid/image/upload/v1565169836/git_InstallationOne_Success_2019-08-06_3.jpg">
+                </div>
+        
+        </div>
+        <div class="row pl-2 pr-2">
+                     <div class="col-sm-12">
+                                <p  style="font-size:28px">
+                                                After the Successful installation,Right click Windows10 start option and click search.Type <strong>environment</strong> and you will see Edit the system environment variables (Control Panel)and click Environment Variables.
+                                        </p>
+                     </div>   
+                </div>
+    <div class="row pl-2 pr-2">
+        <div class="col-sm-6">
+          <div class="card border-secondary mb-3 text-center">
+                <h1 class="card-header" style="font-size:32px"></h1>
+            <div class="card-body">
+              <h1 class="card-title" style="font-size:32px"></h1>
+              <h2 class="card-text" style="font-size:32px"></h2>
+              
+              <p>
+                    <img width="full"class="img-fluid pr-4" src="https://res.cloudinary.com/dskzmamid/image/upload/v1565170047/new%20folder/New%20folder/editEnvironmentVariables.jpg">
+            </p>
+            
+            
+            </div>
+          </div>
+        </div>
+        <div class="col-sm-6">
+          <div class="card border-secondary mb-3 text-center">
+                <h5 class="card-header" style="font-size:32px"></h5>
+               
+            <div class="card-body">
+              <h1 class="card-title" style="font-size:32px"></h1>
+              <h2 class="card-text" style="font-size:32px"></h2>
+              <p>
+                    <img width="full" class="img-fluid pr-4" src="https://res.cloudinary.com/dskzmamid/image/upload/v1565172349/new%20folder/New%20folder/evariablesOneT.jpg">
+            </p>
+              
+            </div>
+          </div>
+        </div>
+    </div>
+<!------
+    <p class="p-4" style="font-size:28px">
+        After the Successful installation,Right click Windows10 start option and click search.Type <strong>environment</strong> and you will see Edit the system environment variables (Control Panel)and click Environment Variables.
+</p>
+<div class="row p-4">
+    <div class="col-sm-6">
+            <p>
+                    <img width="full"class="img-fluid" src="https://res.cloudinary.com/dskzmamid/image/upload/v1565170047/new%20folder/New%20folder/editEnvironmentVariables.jpg">
+            </p>
+    </div>
+    <div class="col-sm-6">
+            <p>
+                    <img width="full"class="img-fluid" src="https://res.cloudinary.com/dskzmamid/image/upload/v1565172349/new%20folder/New%20folder/evariablesOneT.jpg">
+            </p>
+        </div>
+       
+</div>
+---->
+        <p class="pl-2 pr-2" style="font-size:28px">You should see the installed Git in the path as shown below:</p>
+        <img width="full"class="img-fluid pl-2 pr-4" src="https://res.cloudinary.com/dskzmamid/image/upload/v1565170054/new%20folder/New%20folder/Path_verifyGITInstallation.jpg">
+        <p class="pl-2 pr-2" style="font-size:28px">OK.Now test the git by typing <strong>git</strong> in new command prompt(cmd):</p>
+        <img width="full"class="pl-2" src="https://res.cloudinary.com/dskzmamid/image/upload/v1565170041/new%20folder/New%20folder/2019-08-06_5.png">
+        <p class="text-success pl-4" style="font-size:36px">All set.</p>
+        <p class="pl-2 mb-2" style="font-size:32px"><strong>One more task</strong></p>
+        <div class="row pl-2 pr-2">
+                        <div class="col-sm-12">
+                                   <p class="" style="font-size:28px">In the Git Bash,<strong>Configuration</strong> of your Github <strong>user name</strong> and <strong>email</strong> must be done.</p>
+                        </div>   
+         </div>
+
+        <div class="row  pr-2">
+                        <div class="col-sm-12">
+                                <p class="" style="font-size:28px">Follow the below video "GIT: Installation, Configuration and First Commit" <a href="https://www.youtube.com/watch?v=QqP7YZlZEOo">https://www.youtube.com/watch?v=QqP7YZlZEOo</a> to configure your Github username and email with the Git.</p>    
+                         </div>   
+        </div>          
+        <div class="row  pr-2">
+                        <div class="col-sm-12">
+                                        <p class="" style="font-size:32px">First config username and email to connect with the github.</p> 
+                         </div>   
+        </div> 
+        
+     <!-----  <p class="pl-2" style="font-size:32px">First config username and email to connect with the github.</p>  --->
+        <p class="p-2" style="font-size:20px"><strong>git config --global user.name "username"</strong></p>
+        <p class="p-2" style="font-size:20px"><strong>git config --global user.email "email"</strong></p>
+        <p class="p-2" style="font-size:20px"><strong>git status</strong></p>
+        <p class="p-2" style="font-size:20px"><strong>git commit -m 'initial commit'</strong></p>
+        <p class="p-2" style="font-size:28px">Create a new repository in Github without a readme.</p>
+        <div class="row  pr-2">
+                        <div class="col-sm-12">
+                                        <p class="pr-2" style="font-size:20px"><strong>git remote add origin https://github.com/username/repositoryName.git</strong></p>        
+                         </div>   
+        </div> 
+        
+        <p class="p-2" style="font-size:20px"><strong>git push -u origin master</strong></p>
+        <p class="p-2" style="font-size:20px"><Strong>git log</Strong> to see the commits.</p>
+        <div class="row  pr-2">
+                        <div class="col-sm-12">
+                                        <p class="text-success pl-4" style="font-size:36px">All set for a Github Push.</p>    
+                         </div>   
+        </div> 
+        
+        
+ 
+<div class="row pl-4 pr-2">
+        <h1 style="font-size:36px" class="col text-danger card card-body  border-bottom border-3 border-right-0 border-left-0 border-top-0">If you do not have Node.js on Windows?
+        </h1>
+</div>
+<!-----
+        <div class="container">  -->
+                <div class="row pr-2">
+                        <div class="col-sm-12">
+                                        <p class="" style="font-size:28px">Follow the tutorial on "How to Install and Use Node.js and npm (Mac, Windows, Linux)" in <a href="https://www.taniarascia.com/how-to-install-and-use-node-js-and-npm-mac-and-windows/">https://www.taniarascia.com/how-to-install-and-use-node-js-and-npm-mac-and-windows/</a>.</p>   
+                        </div>
+                </div>
+
+                <div class="row pr-2">
+                                <div class="col-sm-12">
+                                                <p class="" style="font-size:28px">It says "Installing everything on Windows is a breeze.<strong>Install Node.js and npm</strong>
+                                                        Node.js and npm can be installed from a download link. Go to the <a href="https://nodejs.org/en/download/">Node installation page</a>, and download the Node installer. I have a 64-bit Windows 10 OS, so I chose that one."</p> 
+                                </div>
+                        </div>
+    <!------                 
+ <p class="" style="font-size:28px">Follow the tutorial on "How to Install and Use Node.js and npm (Mac, Windows, Linux)" in <a href="https://www.taniarascia.com/how-to-install-and-use-node-js-and-npm-mac-and-windows/">https://www.taniarascia.com/how-to-install-and-use-node-js-and-npm-mac-and-windows/</a>.</p>
+ <p class="" style="font-size:28px">It says "Installing everything on Windows is a breeze.<strong>Install Node.js and npm</strong>
+        Node.js and npm can be installed from a download link. Go to the <a href="https://nodejs.org/en/download/">Node installation page</a>, and download the Node installer. I have a 64-bit Windows 10 OS, so I chose that one."</p>
+ ---->
+ 
+        <div class="row pr-2">
+        <div class="col-sm-6">
+                <img width="full"class="img-fluid pr-4" src="https://res.cloudinary.com/dskzmamid/image/upload/v1565175347/new%20folder/New%20folder/node.jpg">
+                
+                 </div>
+                <div class="col-sm-6">
+                        <p class="" style="font-size:28px">"Once it's done, you can test to see both node and npm functioning by opening PowerShell (or any shell) and typing <strong>node -v</strong> and<strong>npm -v</strong>, which will check the version number."</p>
+                        <img class="img-fluid pr-4" src="https://res.cloudinary.com/dskzmamid/image/upload/v1565170052/new%20folder/New%20folder/powershell.jpg">        
+                    </div>
+                <!----  <img class="p-4 img-fluid " src="https://res.cloudinary.com/dskzmamid/image/upload/v1565170052/new%20folder/New%20folder/powershell.jpg">       --->
+ </div>
+    <!----    <div class="col-sm-6">
+<img width="full"class="p-4" src="https://res.cloudinary.com/dskzmamid/image/upload/v1565175347/new%20folder/New%20folder/node.jpg">
+<p class="p-4" style="font-size:28px">Once it's done, you can test to see both node and npm functioning by opening PowerShell (or any shell) and typing node -v and npm -v, which will check the version number.</p>
+ </div>
+<div class="col-sm-6">
+        <img class="p-4 img-fluid " src="https://res.cloudinary.com/dskzmamid/image/upload/v1565170052/new%20folder/New%20folder/powershell.jpg">        
+</div>
+  <img class="p-4 img-fluid " src="https://res.cloudinary.com/dskzmamid/image/upload/v1565170052/new%20folder/New%20folder/powershell.jpg">       --->
+  <p class="text-success pl-4 pr-2" style="font-size:36px">All set.</p>
+
+<!-- </div> -->
+
+
+<!----
+        <div class="row p-4">
+                <h1 style="font-size:36px" class="text-danger card card-body  shadow-sm border-right-0 border-left-0 border-top-0 mb-3rem">If you do not have Visual Studio Code on Windows?
+                </h1>
+               
+        </div> 
+        <h1 style="font-size:36px" class="text-danger card card-body  border border-bottom border-right-0 border-left-0 border-top-0 mb-3rem">If you do not have Visual Studio Code on Windows?
+            </h1>
+        ---->
+            <h1 style="font-size:36px" class="text-danger card card-body  border-bottom border-3 border-right-0 border-left-0 border-top-0">If you do not have Visual Studio Code on Windows?
+                </h1>
+     <div class="row pr-2">
+              <p class="col-sm-12" style="font-size:28px">Vist the link<a href="https://code.visualstudio.com/"> https://code.visualstudio.com/</a></p>
+        
+                
+     </div>  
+     <div class="row pr-2">
+                <div class="col-sm-12">
+                                <p class="" style="font-size:28px">Click Download for Windows and run the application.</p>  
+                </div>
+               
+     </div> 
+     
+        <p class="text-success pl-4" style="font-size:36px">All set.</p>
+  
+  
+        <div class="row pl-4 pr-2">
+                <h1 style="font-size:36px" class="col text-danger card card-body  border-bottom border-3 border-right-0 border-left-0 border-top-0">If you do not have Angular?
+                </h1>
+        </div>
+        <div class="row pr-2">
+                        <div class="col-sm-12">
+                                        <p style="font-size:28px">
+                                                        Angular installation is managed by Node.js(npm).So,with Node.js installed,you can get Angular installed with the following code:
+                                        </p>   
+                        </div>
+                       
+             </div> 
+             <div class="row pr-2">
+                        <div class="col-sm-12">
+                                        <p style="font-size:28px">
+                                                  <strong> npm install -g @angular/cli</strong>     
+                                        </p>   
+                        </div>
+                       
+             </div>
+        
+        <div class="row pr-2">
+                        <div class="col-sm-12">
+                                        
+                                        <p class="" style="font-size:28px">Make a new folder AngularTest.</p>
+                                        <img class="img-fluid pr-4" src="https://res.cloudinary.com/dskzmamid/image/upload/v1565254550/2019-08-08_1.png"> 
+                                        <p class="" style="font-size:28px">Open the folder in Visual Studio Code.</p>
+                                        <img class="img-fluid pr-4" src="https://res.cloudinary.com/dskzmamid/image/upload/v1565254555/2019-08-08_2.png">    
+                                        <p class="" style="font-size:28px">Open a new terminal in Visual Studio Code.</p>
+                                        <img class="img-fluid pr-4" src="https://res.cloudinary.com/dskzmamid/image/upload/v1565254550/2019-08-08_3.png">    
+                                        <p class="" style="font-size:28px">For Angular CLI installation type,<strong> npm install -g @angular/cli</strong> in the terminal.  </p>
+                                        <img class="img-fluid pr-4" src="https://res.cloudinary.com/dskzmamid/image/upload/v1565254550/2019-08-08_4.png"> 
+                                        <p class="" style="font-size:28px">To create a new Angular project,type<strong> ng new helloWorld</strong> in the terminal.  </p>
+                                        <img class="img-fluid pr-4" src="https://res.cloudinary.com/dskzmamid/image/upload/v1565254550/2019-08-08_5.png">  
+                                        <p class="" style="font-size:28px">On Successful installation,you can see  </p>
+                                        <img class="img-fluid pr-4" src="https://res.cloudinary.com/dskzmamid/image/upload/v1565254550/2019-08-08_6.png">
+
+                                        <p class="" style="font-size:28px">After creation,compile the app with typing<strong> cd helloWorld </strong> in the terminal.  </p>
+                                        <p class="" style="font-size:28px">and<strong> ng serve –-open </strong> in the terminal.  </p>
+                                        <p class="" style="font-size:28px">See the browser<strong> localhost:4200 </strong> </p>
+                                        <img class="img-fluid pr-4" src="https://res.cloudinary.com/dskzmamid/image/upload/v1565254550/2019-08-08_8.png">
+
+ 
+
+                                        <p class="" style="font-size:28px">During Angular CLI installation,I encountered the below error.</p>
+                                <p class="" style="font-size:28px"><a href="https://stackoverflow.com/questions/47675478/npm-install-errorunexpected-end-of-json-input-while-parsing-near-nt-webpack"> https://stackoverflow.com/questions/47675478/npm-install-errorunexpected-end-of-json-input-while-parsing-near-nt-webpack</a></p>  
+                                        <p class="pr-2" style="font-size:28px">When Creating a new Angular 5 project:
+                                                        node version: 8.9.2,
+                                                        npm version: 5.5.1,
+                                                        My Command is
+                                                     <strong>npm install -g @angular/cli</strong> the error is </p>  
+                                        <p class="" style="font-size:28px">npm ERR! Unexpected end of JSON input while parsing near '...nt-webpack-plugin":"0'</p> 
+                                        <p class="" style="font-size:28px">Answers</p>
+                                        <p class="pr-2" style="font-size:28px"><strong>npm cache clean --force</strong></p>
+                                        <p class="" style="font-size:28px">then run</p>
+                                        <p class="" style="font-size:28px"><strong>npm install -g @angular/cli@latest</strong></p>
+                                </div>
+                       
+             </div> 
+             <p class="text-success pl-4" style="font-size:36px">All set.</p>
+             <h1 style="font-size:36px" class="text-danger card card-body  border-bottom border-3 border-right-0 border-left-0 border-top-0">If you do not have Github Account?
+                </h1>
+                <div class="row pr-2">
+                                <div class="col-sm-12">
+                                                <p style="font-size:28px">
+                                                                Go and sign up for new <a href="https://github.com/">Github Account</a>.  
+                                                </p>   
+                                </div>
+                               
+                     </div>
+
+                     <p class="text-success pl-4" style="font-size:36px">All set.</p>
+                     <h1 style="font-size:36px" class="text-danger card card-body  border-bottom border-3 border-right-0 border-left-0 border-top-0">If you do not have Netlify Account?
+                        </h1>
+                     <div class="row pr-2">
+                                <div class="col-sm-12">
+                                                <p style="font-size:28px">
+                                                                Go and sign up for new  <a href="https://www.netlify.com/">Netlify Account</a>  using your Github Account for free.
+                                                </p>   
+                                </div>
+                               
+                     </div>
+                     <p class="text-success pl-4" style="font-size:36px">All set.</p>
+                     <div class="row pl-2 pr-2">
+                                <h1 style="font-size:56px" class="col-sm-12 card card-body  border-bottom border-3 border-right-0 border-left-0 border-top-0">
+                                        Step 2:   
+                                </h1> 
+                        </div>
+                        <div class="row pr-2">
+                                        <div class="col-sm-12">
+                                                        <p style="font-size:28px">
+                                                                        For deploying the app,you can follow the video,<a href="https://www.youtube.com/watch?v=HCYteRRGcCM&list=WL&index=2&t=0s">https://www.youtube.com/watch?v=HCYteRRGcCM&list=WL&index=2&t=0s</a>"Deploy Angular 6 Applications to Netlify Hosting" to deploy Angular app to Netlify by pushing it to github.
+                                                        </p>   
+                                        </div>
+                                       
+                             </div>
+                             <div class="row pl-2 pr-2">
+                                        <h1 style="font-size:36px" class="col-sm-12 card card-body  border-bottom border-3 border-right-0 border-left-0 border-top-0">
+                                               Links :  
+                                        </h1> 
+                                </div>
+                                <div class="row pr-2">
+                                                <div class="col-sm-12">
+                                                                <p style="font-size:28px">
+                                                                               <strong>1.</strong> Deploying an Angular 4 App
+
+                                                                        <a href="https://www.youtube.com/watch?v=nxV3weqMzYo">https://www.youtube.com/watch?v=nxV3weqMzYo</a>   
+                                                                                The same text tutorial is at 
+                                                                          <a href=" https://coursetro.com/posts/code/64/How-to-Deploy-an-Angular-App-(Angular-4)"> https://coursetro.com/posts/code/64/How-to-Deploy-an-Angular-App-(Angular-4)</a>     
+                                                                                The above tutorial explains us on deploying the app on Github Pages.
+                                                                                
+                                                                </p>   
+                                                                <p style="font-size:28px">
+                                                                                <strong>2.</strong>     Another text  tutorial on how to deploy Angular app on GitHub pages. <a href="https://medium.com/coinmonks/how-to-deploy-an-angular-app-8db1af39f8c1">https://medium.com/coinmonks/how-to-deploy-an-angular-app-8db1af39f8c1</a>
+                                                                                
+                                                                                  
+                                                                                
+                                                                </p>   
+                                                                <p style="font-size:28px">  <strong>3.</strong>  Creating and Hosting a Static Angular Site on Netlify
+                                                                       <a href=" https://jamesmundy.net/writing/2019/1/1/creating-and-hosting-a-static-angular-site-on-netlify"> https://jamesmundy.net/writing/2019/1/1/creating-and-hosting-a-static-angular-site-on-netlify</a>   Tutorial, TechnologyJanuary 2, 2019    
+                                                                                
+                                                                </p>   
+                                                </div>
+                                               
+                                     </div>
+
+</div>
+<!----
+<p>blog-one works!</p>
+-->
